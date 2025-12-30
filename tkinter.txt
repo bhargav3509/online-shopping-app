@@ -21,7 +21,7 @@ class ShoppingApp:
             conn = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                password="Cu@11028"
+                password="your_mysql_password"
             )
             cursor = conn.cursor()
             
@@ -72,7 +72,7 @@ class ShoppingApp:
             return mysql.connector.connect(
                 host="localhost",
                 user="root",
-                password="Cu@11028",
+                password="your_mysql_password",
                 database="online_shopping"
             )
         except mysql.connector.Error as err:
@@ -272,4 +272,5 @@ if __name__ == "__main__":
     style.configure("Card.TFrame", background="#f0f0f0", relief="groove", borderwidth=2)
     
     app = ShoppingApp(root)
+
     root.mainloop()
